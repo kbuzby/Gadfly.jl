@@ -221,7 +221,7 @@ end
 # Returns:
 #   A new Aesthetics instance with vectors concatenated.
 #
-function concat(aess::Aesthetics...)
+function cat(aess::Aesthetics...)
     cataes = Aesthetics()
     for aes in aess
         for var in Aesthetics.names

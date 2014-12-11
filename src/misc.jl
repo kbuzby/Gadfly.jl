@@ -1,5 +1,3 @@
-using Compat
-
 # Is this usable data?
 function isconcrete{T<:Number}(x::T)
     !isna(x) && isfinite(x)

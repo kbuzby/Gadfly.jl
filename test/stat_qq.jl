@@ -1,4 +1,3 @@
-
 using Gadfly
 using Distributions
 

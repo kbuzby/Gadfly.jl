@@ -54,7 +54,7 @@ include("varset.jl")
 include("theme.jl")
 include("data.jl")
 include("aesthetics.jl")
-
+include("dates.jl")
 
 # The layer and plot functions can also take functions that are evaluated with
 # no arguments and are expected to produce an element.

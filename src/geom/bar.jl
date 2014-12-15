@@ -250,6 +250,12 @@ function render(geom::BarGeometry, theme::Gadfly.Theme, aes::Gadfly.Aesthetics,
         values = getfield(aes, var)
         minvalue, maxvalue = minimum(values), maximum(values)
         T = typeof(maxvalue - minvalue)
+	if T <: Dates.Period
+		origT = T
+		T = Int64
+		aes2.var = map(val -> Int64(val), values)
+		values = aes2.var
+	end
 
         span = zero(T)
         unique_count = length(Set(values))
